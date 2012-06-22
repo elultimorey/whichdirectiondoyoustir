@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="utf-8" />
+		
+	<title>Which direction do you stir? (ALWAYS BETA, ALWAYS BE IMPROVED)</title>
+
+	<link rel="author" href="/humans.txt" />
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="/stylesheets/foundation.css">
+	<link rel="stylesheet" href="/stylesheets/app.css">
+
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="/stylesheets/ie.css">
+	<![endif]-->
+	
+	<script src="/javascripts/modernizr.foundation.js"></script>
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div class="container"> 
+		<div class="row header">
+			<div class="one columns hide-on-phones">
+			</div>
+			<div class="three columns header-img">
+				<img src="/img/tpm.png" border=0>
+			</div>
+			<div class="seven columns header-title">
+				<h1>Which direction do you stir?</h1>
+			</div>
+			<div class="one columns right">
+				<h6><a href="/stats">stats</a></h6>	
+			</div>
+		</div>
+		<form name="form" method="post" action="/vote/">
+			<div class="row ">
+				<div class="one columns hide-on-phones">
+				</div>
+				<div class="ten columns centered center">
+					<div class="five columns center arrow-button">
+						<img class="arrow" src="/img/clockwise.png" />
+						<br>
+						<input class="nice medium radius button" type="submit" name="choice" value="Clockwise" />
+					</div>
+					<div class="five columns end center arrow-button">
+						<img class="arrow" src="/img/counter_clockwise.png" />
+						<br>
+						<input class="nice medium radius button" type="submit" name="choice" value="Counter Clockwise" />
+					</div>
+				</div>
+			</div>
+			<div class="row">
+			<div class="three columns centered center">
+				<label for="geo"><input type="checkbox" name="geo" id="geo" checked> Use my location</label>
+			</div>
+			</div>
+		</form>
+	</div>
+</body>
+<footer>
+	<a href="/humans.txt"><img src="/img/humanstxt-isolated-blank.gif" /></a>
+</footer>
+</html>

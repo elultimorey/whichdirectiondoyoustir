@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="utf-8" />
+
+	<title>Which direction do you stir? - Stats (ALWAYS BETA, ALWAYS BE IMPROVED)</title>
+
+	<link rel="author" href="/humans.txt" />
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="/stylesheets/foundation.css">
+	<link rel="stylesheet" href="/stylesheets/app.css">
+
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="/stylesheets/ie.css">
+	<![endif]-->
+	
+	<script src="/javascripts/modernizr.foundation.js"></script>
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    		<script type="text/javascript">
+	      google.load("visualization", "1", {packages:["corechart"]});
+	      google.setOnLoadCallback(drawChart);
+	      function drawChart() {
+	        var data = google.visualization.arrayToDataTable([
+	          ['Rate', 'Clockwise', 'Counter Clockwise'],
+	          ['Percentage',  {{clockwise}},      {{counter_clockwise}}]
+	        ]);
+	
+	        var options = {
+	          title: 'Stats of: {{country}}',
+	          hAxis: {title: '{{country}}', titleTextStyle: {color: 'red'}}
+	        };
+	
+	        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+	        chart.draw(data, options);
+	      }
+	    </script>
+
+</head>
+<body>
+	<div class="container"> 
+		<div class="row">
+				{% block header %}{% endblock %}
+				{% block alert-box %}{% endblock %}
+				{% block chart %}{% endblock %}
+				{% block countries %}{% endblock %}
+		</div>
+	</div>
+
+	<!-- Included JS Files -->
+	<script src="/javascripts/jquery.min.js"></script>
+	<!-- End Combine and Compress These JS Files -->
+	<script src="/javascripts/app.js"></script>
+</body>
+<footer>
+	<a href=""><img src="/img/humanstxt-isolated-blank.gif" /></a>
+</footer>
+</html>

@@ -1,0 +1,36 @@
+application: whichdirectiondoyoustir
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+
+- url: /stylesheets
+  static_dir: stir/templates/stylesheets
+
+- url: /img
+  static_dir: stir/templates/img
+
+- url: /javascripts
+  static_dir: stir/templates/javascripts
+
+- url: /fonts
+  static_dir: stir/templates/fonts
+
+- url: /vote/
+  script: work.py
+
+- url: /worker
+  script: work.py
+
+- url: /stats(.*)
+  script: main.py
+
+- url: /
+  script: main.py
+  
+- url: /humans.txt
+  script: humans.py
+
+- url: /(.+)
+  script: 404.py

@@ -1,0 +1,59 @@
+/* Foundation v2.2.1 http://foundation.zurb.com */
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+-------------------------------------- --- */
+
+	.header {  text-align:center;
+			margin-top:1%; }
+	.header h1 { margin-top: 25%;
+				font-family: 'Oswald', sans-serif;
+				letter-spacing: 0;
+				color: #000;
+				text-decoration: none; }
+	.header-title h6 a { margin-top: 25%; }
+	.header-img { text-align:right; }
+	.header-title { text-align:left; }
+	
+	footer { position:fixed;
+			bottom: 0px;
+			right: 1rem; }
+
+/* -----------------------------------------
+   Page Name 1
+----------------------------------------- */
+
+	.center { text-align: center; }
+	.right { text-align: right; }
+	.no-margin-left { margin-left:0% !important; }
+
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+	.arrow { width:50%; }
+	@media only screen and (max-width: 767px) {
+		.header h1 { margin-top: 0%; } 
+		.arrow-button { margin-left:10%; width:45% !important; float:left !important; }
+		.header-img { text-align: center; }
+		.header-title { text-align: center; } 
+		footer { position:relative; float:right; }}
+ 
+	@media only screen and (max-width: 1280px) and (min-width: 768px) {
+		body { background:url('../img/back.png') bottom left no-repeat fixed;
+		        background-size: 20%; } 
+		h1 { font-size:3.7rem; } }
+
+	@media only screen and (min-width: 1280px) {
+		body { background:url('../img/back.png') bottom left no-repeat fixed; } }
+

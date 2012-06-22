@@ -1,0 +1,20 @@
+{% extends 'chart.html' %}
+{% block countries %}
+<nav>
+	<ul>
+		{% for c in countries %}
+			{% if forloop.counter0|divisibleby:"3"  %}
+				<div class="row">
+					<div class="six columns centered">
+			{% endif %}
+						<div class="four columns center">
+							<li><a href="/stats/{{c}}">{{c}}</a></li>
+						</div>		
+			{% if forloop.counter|divisibleby:"3" %}
+					</div>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</ul>
+</nav>
+{% endblock %}
