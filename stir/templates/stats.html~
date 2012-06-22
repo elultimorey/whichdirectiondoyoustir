@@ -39,8 +39,7 @@
 	
 	        var options = {
 	          title: 'Stats of: {{country}}',
-	          hAxis: {title: '{{country}}', titleTextStyle: {color: 'red'}},
-			  vAxis: {minValue: '0', maxValue: '100'}
+	          hAxis: {title: '{{country}}', titleTextStyle: {color: 'red'}, minValue: '0', maxValue: '100'}
 	        };
 	
 	        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
