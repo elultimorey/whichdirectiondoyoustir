@@ -27,7 +27,7 @@
 		{% else %}
 			<div class="center">
 				<h4>Sorry, we have a problem with the datastore.</h4>
-				<h4>Press F5 to see if it is solved.</h4>
+				<h4>Press <strong>F5</strong> to see if it is solved.</h4>
 			</div>
 		{% endif %}
 	</div>

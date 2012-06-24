@@ -2,7 +2,7 @@
 {% block alert-box %}
 <div class="row">
 	<div class="nine columns centered">
-		{% if type and country %}
+		{% if type && country %}
 			<div class="alert-box {{ type }}">
 					{{alert_info}}
 				<a href="" class="close">&times;</a>

@@ -23,12 +23,12 @@ def stats(request, arg=None):
 	else:
 		country = str(arg).replace('/', '')
 	poll = Poll.get_by_key_name(country)
-	if poll is None:
+	if poll == None:
 		# The country not exits
 		data['type'] = 'warning'
 		data['alert_info'] = 'No data for that country'
 		poll = Poll.get_by_key_name('all')
-	if poll is not None:
+	if poll != None:
 		data['country']=poll.country
 		total = poll.clockwise + poll.counter_clockwise
 		data['clockwise'] = poll.clockwise*100/total
